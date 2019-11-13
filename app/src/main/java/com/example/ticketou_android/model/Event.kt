@@ -1,5 +1,7 @@
 package com.example.ticketou_android.model
 
+import java.io.Serializable
+
 data class Event(
     val image: String,
     val name: String,
@@ -8,4 +10,4 @@ data class Event(
     val ticketQuantity: Int,
     val date: String,
     val price: Double
-)
+) : Serializable
