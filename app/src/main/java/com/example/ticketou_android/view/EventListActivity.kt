@@ -1,6 +1,7 @@
 package com.example.ticketou_android.view
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.example.ticketou_android.R
 import com.example.ticketou_android.model.Event
@@ -11,6 +12,8 @@ class EventListActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_list)
+
+        new_event.setOnClickListener { startActivity(Intent(this, NewEventActivity::class.java)) }
 
         //ToDo: create mock event list
         val eventList = mutableListOf(
